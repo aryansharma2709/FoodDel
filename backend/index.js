@@ -1,17 +1,17 @@
-import express from "express"
-import dotenv from "dotenv"
-dotenv.config()
-import connectDb from "./config/db.js"
 import cookieParser from "cookie-parser"
-import authRouter from "./routes/auth.routes.js"
 import cors from "cors"
+import dotenv from "dotenv"
+import express from "express"
+import connectDb from "./config/db.js"
+import authRouter from "./routes/auth.routes.js"
 import userRouter from "./routes/user.routes.js"
+dotenv.config()
 
-import itemRouter from "./routes/item.routes.js"
-import shopRouter from "./routes/shop.routes.js"
-import orderRouter from "./routes/order.routes.js"
 import http from "http"
 import { Server } from "socket.io"
+import itemRouter from "./routes/item.routes.js"
+import orderRouter from "./routes/order.routes.js"
+import shopRouter from "./routes/shop.routes.js"
 import { socketHandler } from "./socket.js"
 
 const app=express()

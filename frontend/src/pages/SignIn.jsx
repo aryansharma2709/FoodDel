@@ -1,15 +1,13 @@
-import React from 'react'
-import { useState } from 'react';
-import { FaRegEye } from "react-icons/fa";
-import { FaRegEyeSlash } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
-import { useNavigate } from 'react-router-dom';
-import axios from "axios"
-import { serverUrl } from '../App';
+import axios from "axios";
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from '../../firebase';
-import { ClipLoader } from 'react-spinners';
+import { useState } from 'react';
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { ClipLoader } from 'react-spinners';
+import { auth } from '../../firebase';
+import { serverUrl } from '../App';
 import { setUserData } from '../redux/userSlice';
 function SignIn() {
     const primaryColor = "#ff4d2d";
@@ -54,7 +52,7 @@ function SignIn() {
             <div className={`bg-white rounded-xl shadow-lg w-full max-w-md p-8 border-[1px] `} style={{
                 border: `1px solid ${borderColor}`
             }}>
-                <h1 className={`text-3xl font-bold mb-2 `} style={{ color: primaryColor }}>Vingo</h1>
+                <h1 className={`text-3xl font-bold mb-2 `} style={{ color: primaryColor }}>VinGo</h1>
                 <p className='text-gray-600 mb-8'> Sign In to your account to get started with delicious food deliveries
                 </p>
 

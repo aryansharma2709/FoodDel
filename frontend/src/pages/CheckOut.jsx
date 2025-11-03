@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import axios from 'axios';
+import "leaflet/dist/leaflet.css";
+import { useEffect, useState } from 'react';
+import { FaCreditCard } from "react-icons/fa";
+import { FaMobileScreenButton } from "react-icons/fa6";
 import { IoIosArrowRoundBack } from "react-icons/io";
-import { IoSearchOutline } from "react-icons/io5";
+import { IoLocationSharp, IoSearchOutline } from "react-icons/io5";
+import { MdDeliveryDining } from "react-icons/md";
 import { TbCurrentLocation } from "react-icons/tb";
-import { IoLocationSharp } from "react-icons/io5";
 import { MapContainer, Marker, TileLayer, useMap } from 'react-leaflet';
 import { useDispatch, useSelector } from 'react-redux';
-import "leaflet/dist/leaflet.css"
-import { setAddress, setLocation } from '../redux/mapSlice';
-import { MdDeliveryDining } from "react-icons/md";
-import { FaCreditCard } from "react-icons/fa";
-import axios from 'axios';
-import { FaMobileScreenButton } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
 import { serverUrl } from '../App';
-import { addMyOrder, setTotalAmount } from '../redux/userSlice';
+import { setAddress, setLocation } from '../redux/mapSlice';
+import { addMyOrder } from '../redux/userSlice';
 function RecenterMap({ location }) {
   if (location.lat && location.lon) {
     const map = useMap()
